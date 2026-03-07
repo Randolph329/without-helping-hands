@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hands of Care | Resource Directory</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .search-box {
+      margin: 20px 0;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    .search-box input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 4px rgba(59, 130, 246, 0.4);
+    }
+
+    .button {
+      display: inline-block;
+      background: #1a4d8f;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    .section {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      scroll-margin-top: 20px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #1a4d8f;
+    }
+
+    .resource-card {
+      background: #f9fafb;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .resource-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .resource-card li {
+      margin-bottom: 10px;
+    }
+
+    .resource-card a {
+      color: #1a4d8f;
+      text-decoration: none;
+    }
+
+    .resource-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DMV Senior Resource Directory</h1>
+    <div class="tagline">Organized support for seniors and caregivers.</div>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="resourceSearch"
+        placeholder="Search resources (housing, food, healthcare...)"
+      />
+    </div>
+
+    <p><a href="index.html" class="button">← Back to Home</a></p>
+
+    <div class="section" id="healthcare">
+      <h2>🏥 Healthcare</h2>
+      <div class="resource-card">
+        <ul>
+          <li><a href="https://www.medicare.gov" target="_blank">Medicare Official Website</a></li>
+          <li><a href="https://dacl.dc.gov/service/senior-services" target="_blank">DC Senior Health Services</a></li>
+          <li><a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank">Mental Health Support Line</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="food">
+      <h2>🍽 Food & Nutrition</h2>
+      <div class="resource-card">
+        <ul>
+          <li><a href="https://www.fns.usda.gov/snap/supplemental-nutrition-assistance-program" target="_blank">SNAP Food Assistance</a></li>
+          <li><a href="https://www.mealsonwheelsamerica.org" target="_blank">Meals on Wheels</a></li>
+          <li><a href="https://capitalareafoodbank.org" target="_blank">Capital Area Food Bank</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="housing">
+      <h2>🏠 Housing & Living</h2>
+      <div class="resource-card">
+        <ul>
+          <li><a href="https://www.hud.gov/topics/information_for_senior_citizens" target="_blank">HUD Housing Information for Seniors</a></li>
+          <li><a href="https://dhcd.dc.gov" target="_blank">DC Housing Resources</a></li>
+          <li><a href="https://www.benefitscheckup.org" target="_blank">BenefitsCheckUp Housing Help</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="transportation">
+      <h2>🚌 Transportation</h2>
+      <div class="resource-card">
+        <ul>
+          <li><a href="https://www.wmata.com/fares/reduced-fare-programs/seniors/" target="_blank">Metro Reduced Fare for Seniors</a></li>
+          <li><a href="https://dctaxi.dc.gov/service/taxi-senior-medical-transportation" target="_blank">DC Senior Medical Transportation</a></li>
+          <li><a href="https://www.uber.com/us/en/ride/uber-assist/" target="_blank">Uber Assist</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="benefits">
+      <h2>💰 Benefits & Financial Help</h2>
+      <div class="resource-card">
+        <ul>
+          <li><a href="https://www.ssa.gov/ssi" target="_blank">Supplemental Security Income (SSI)</a></li>
+          <li><a href="https://www.benefitscheckup.org" target="_blank">BenefitsCheckUp</a></li>
+          <li><a href="https://doee.dc.gov/service/energy-assistance-program" target="_blank">DC Energy Assistance Program</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("resourceSearch");
+
+    searchInput.addEventListener("keyup", function (e) {
+      if (e.key === "Enter") {
+        const value = searchInput.value.toLowerCase().trim();
+
+        if (value.includes("health")) {
+          document.getElementById("healthcare").scrollIntoView({ behavior: "smooth" });
+        } else if (value.includes("food") || value.includes("nutrition")) {
+          document.getElementById("food").scrollIntoView({ behavior: "smooth" });
+        } else if (value.includes("housing") || value.includes("living")) {
+          document.getElementById("housing").scrollIntoView({ behavior: "smooth" });
+        } else if (value.includes("transport")) {
+          document.getElementById("transportation").scrollIntoView({ behavior: "smooth" });
+        } else if (
+          value.includes("benefit") ||
+          value.includes("money") ||
+          value.includes("financial")
+        ) {
+          document.getElementById("benefits").scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
