@@ -3,144 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Become a Community Angel</title>
+<title>Without Helping Hands</title>
+
 <style>
+
 body{
 font-family:Arial,sans-serif;
 margin:0;
 background:#f5f7fb;
 color:#1f2937;
 }
+
 header{
 background:#111827;
 color:white;
 text-align:center;
-padding:48px 20px;
+padding:50px 20px;
 }
+
 header h1{
 margin:0;
-font-size:40px;
+font-size:42px;
 }
+
 header p{
 margin-top:10px;
-font-size:18px;
+font-size:20px;
 color:#d1d5db;
 }
+
 .container{
-max-width:900px;
-margin:0 auto;
-padding:40px 20px 60px;
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
 }
-.section{
-background:white;
-padding:28px;
-border-radius:14px;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
-margin-bottom:24px;
-}
-.section h2{
-margin-top:0;
-color:#1d4ed8;
-}
-form{
+
+.cards{
 display:grid;
-gap:14px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
-input, select, textarea{
-width:100%;
-padding:12px;
-border:1px solid #d1d5db;
-border-radius:8px;
-font-size:16px;
-box-sizing:border-box;
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+text-align:center;
 }
-textarea{
-min-height:120px;
-resize:vertical;
+
+.card h2{
+margin-top:0;
 }
+
 .button{
 display:inline-block;
 background:#1d4ed8;
 color:white;
-text-decoration:none;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:8px;
-font-weight:bold;
-border:none;
-cursor:pointer;
+text-decoration:none;
+margin-top:15px;
 }
+
 .button:hover{
 background:#1e40af;
 }
-.button-row{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin-top:20px;
+
+.bottom{
+text-align:center;
+margin-top:40px;
 }
+
+.bottom a{
+margin:10px;
+}
+
 </style>
+
 </head>
+
 <body>
 
 <header>
-<h1>Become a Community Angel</h1>
-<p>Serve your community, help people, and earn with purpose</p>
+<h1>Without Helping Hands</h1>
+<p>Platform for service and opportunities</p>
 </header>
 
 <div class="container">
 
-<div class="section">
-<h2>What Is a Community Angel?</h2>
-<p>Community Angels are people who take pride in helping others, improving neighborhoods, supporting seniors, and doing quality work with care.</p>
-<p>This is more than just a job. It is a chance to represent service, dignity, responsibility, and real community care.</p>
-</div>
+<div class="cards">
 
-<div class="section">
-<h2>The Community Angel Code</h2>
-<ul>
-<li>If you see something, clean something.</li>
-<li>Do everything to the best of your ability.</li>
-<li>Seniors are first.</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Why Join?</h2>
-<p>Community Angels help with cleaning, yard work, senior assistance, community cleanup, and property and building services.</p>
-<p>This platform is for people who want to make money while doing work that matters.</p>
-</div>
-
-<div class="section">
-<h2>Application Form</h2>
-
-<form action="https://formspree.io/f/xjgakjrr" method="POST">
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="tel" name="phone" placeholder="Phone Number">
-<input type="email" name="email" placeholder="Email Address" required>
-<input type="text" name="location" placeholder="City / State">
-
-<select name="service_interest">
-<option value="">Select Area of Interest</option>
-<option>Cleaning Service</option>
-<option>Yard Work</option>
-<option>Senior Assistance</option>
-<option>Community Cleanup</option>
-<option>Property & Building Services</option>
-<option>Open to All</option>
-</select>
-
-<input type="text" name="availability" placeholder="Availability">
-
-<textarea name="experience" placeholder="Tell us about your experience, your work ethic, and why you want to become a Community Angel."></textarea>
-
-<button type="submit" class="button">Submit Application</button>
-</form>
-</div>
-
-<div class="button-row">
-<a href="index.html" class="button">Back to Home</a>
+<div class="card">
+<h2>Cleaning Service</h2>
+<p>Professional home and building cleaning by trusted community angels.</p>
 <a href="request.html" class="button">Request a Community Angel</a>
-<a href="mission.html" class="button">Read Our Mission</a>
+</div>
+
+<div class="card">
+<h2>Yard Work</h2>
+<p>Lawn care, outdoor cleanup, and seasonal yard maintenance.</p>
+<a href="request.html" class="button">Request a Community Angel</a>
+</div>
+
+<div class="card">
+<h2>Senior Assistance</h2>
+<p>Helping seniors with errands, home support, and community care.</p>
+<a href="request.html" class="button">Request a Community Angel</a>
+</div>
+
+</div>
+
+<div class="bottom">
+
+<a href="request.html" class="button">Request a Community Angel</a>
+
+<a href="join.html" class="button">Become a Community Angel</a>
+
 </div>
 
 </div>
