@@ -128,12 +128,12 @@
       <h2>Request Form</h2>
 
         <form  action="https://formspree.io/f/xjgakjrr" method="POST">
-        <input type="text" placeholder="Full Name" />
-        <input type="tel" placeholder="Phone Number" />
-        <input type="email" placeholder="Email Address" />
-        <input type="text" placeholder="Address / Location" />
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="tel" name=" placeholder="Phone Number" />
+        <input type="email" name=" placeholder="Email Address" />
+        <input type="text" name=" placeholder="Address / Location" />
 
-        <select>
+        <select> name="service">
           <option>Select Service Needed</option>
           <option>Cleaning Service</option>
           <option>Yard Work</option>
@@ -145,7 +145,7 @@
 
         <input type="text" placeholder="Preferred Date Needed" />
 
-        <textarea placeholder="Describe the help you need, the size of the job, and any important details."></textarea>
+        <textarea name=" placeholder="Describe the help you need, the size of the job, and any important details."></textarea>
 
         <button type="submit" class="button">Submit Request</button>
       </form>
