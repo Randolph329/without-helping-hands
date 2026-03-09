@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Community Angel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 48px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #d1d5db;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    label {
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1d4ed8;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background: #1e40af;
+    }
+
+    .button-row {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .button-row a {
+      margin: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Become a Community Angel</h1>
+    <p>Join the community and help others</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <form action="https://formspree.io/f/xjgakjrn" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" />
+
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" />
+
+        <label for="help">How would you like to help?</label>
+        <textarea id="help" name="help"></textarea>
+
+        <button type="submit" class="button">Join the Community</button>
+      </form>
+    </div>
+
+    <div class="button-row">
+      <a href="index.html" class="button">Back to Home</a>
+      <a href="request.html" class="button">Request a Community Angel</a>
+    </div>
+  </div>
+</body>
+</html>
