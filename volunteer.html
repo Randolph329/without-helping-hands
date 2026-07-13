@@ -146,5 +146,45 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+  <script>
+  const projectUrl = "https://gwyrnafncezgbvdcpkgt.supabase.co";
+  const publishableKey = sb_publishable_yHG2Aag2o3NjePjJdgWNKQ_Rl3_CSL0
+
+  const volunteerDatabase = window.supabase.createClient(
+    projectUrl,
+    publishableKey
+  );
+
+  const volunteerForm = document.getElementById("volunteerForm");
+
+  volunteerForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const { error } = await volunteerDatabase
+      .from("community_angels")
+      .insert([
+        {
+          full_name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          address: document.getElementById("address").value,
+          availability: document.getElementById("availability").value,
+          skills: document.getElementById("skills").value,
+          emergency_contact: document.getElementById("emergency").value,
+          background_check_status: "pending",
+          location_sharing: false
+        }
+      ]);
+
+    if (error) {
+      console.error(error);
+      alert("Your form could not be saved. Please try again.");
+      return;
+    }
+
+    window.location.href = "thank-you.html";
+  });
+</script>
+
 </body>
 </html>
