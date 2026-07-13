@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Without Helping Hands</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="mission.html">Mission</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="request.html">Request Help</a>
+    <a href="join.html">Become an Angel</a>
+  </nav>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>Contact Without Helping Hands</h1>
+
+      <p>
+        Reach out with questions, partnership ideas, service concerns,
+        or ways to support the community.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Contact Us</h2>
+
+      <p>
+        Without Helping Hands is currently building services for communities
+        throughout Washington, D.C., Maryland, and Virginia.
+      </p>
+
+      <p>
+        You can contact us about community cleanup, yard work, senior
+        assistance, volunteer opportunities, partnerships, donations,
+        and other community needs.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Send a Message</h2>
+
+      <form action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST">
+
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          required
+        >
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          required
+        >
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+        >
+
+        <label for="reason">Reason for Contact</label>
+        <select id="reason" name="reason" required>
+          <option value="">Choose a reason</option>
+          <option value="general-question">General Question</option>
+          <option value="partnership">Community Partnership</option>
+          <option value="volunteer">Volunteer Information</option>
+          <option value="donation">Donation Information</option>
+          <option value="service-concern">Service Concern</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="7"
+          placeholder="Tell us how we can help"
+          required
+        ></textarea>
+
+        <input
+          type="hidden"
+          name="_next"
+          value="thank-you.html"
+        >
+
+        <button type="submit" class="button">Send Message</button>
+
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Need Community Help?</h2>
+
+      <p>
+        Use the Request Help screen if you need cleaning, yard work,
+        senior assistance, or another community service.
+      </p>
+
+      <a class="button" href="request.html">Request Help</a>
+    </section>
+
+    <section class="card">
+      <h2>Want to Serve?</h2>
+
+      <p>
+        Community Angels can help neighbors, support seniors, improve
+        neighborhoods, and take part in meaningful local work.
+      </p>
+
+      <a class="button" href="join.html">Become a Community Angel</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Without Helping Hands. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
