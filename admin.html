@@ -228,5 +228,35 @@
     </p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  const projectUrl = "PASTE_PROJECT_URL_HERE";
+  const publishableKey = "PASTE_PUBLISHABLE_KEY_HERE";
+
+  const adminDatabase = window.supabase.createClient(
+    projectUrl,
+    publishableKey
+  );
+
+  async function loadDashboard() {
+    const { count, error } = await adminDatabase
+      .from("community_angels")
+      .select("*", {
+        count: "exact",
+        head: true
+      });
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    document.getElementById("totalVolunteers").textContent = count;
+  }
+
+  loadDashboard();
+</script>
+
 </body>
 </html>
