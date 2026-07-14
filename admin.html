@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Admin Dashboard | Without Helping Hands</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .dashboard-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .dashboard-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    .dashboard-number {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .admin-section {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      margin-bottom: 25px;
+    }
+
+    .admin-search {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #999;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .volunteer-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .volunteer-table th,
+    .volunteer-table td {
+      border: 1px solid #cccccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .volunteer-table th {
+      background-color: #222222;
+      color: white;
+    }
+
+    .status-pending {
+      font-weight: bold;
+    }
+
+    .admin-message {
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .volunteer-table {
+        font-size: 13px;
+      }
+
+      .volunteer-table th,
+      .volunteer-table td {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="mission.html">Mission</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+    <a href="request.html">Request Help</a>
+    <a href="join.html">Become a Community Angel</a>
+    <a href="volunteer.html">Volunteer</a>
+  </nav>
+
+  <header>
+    <h1>Without Helping Hands Admin Dashboard</h1>
+
+    <p>
+      Manage Community Angels, service requests,
+      approvals, and community support.
+    </p>
+  </header>
+
+  <main class="container">
+
+    <section class="dashboard-header">
+      <h2>Admin Overview</h2>
+
+      <p>
+        This private dashboard will help manage
+        volunteers and community service requests.
+      </p>
+    </section>
+
+    <section class="dashboard-grid">
+
+      <div class="dashboard-card">
+        <h3>Total Community Angels</h3>
+        <p class="dashboard-number" id="totalVolunteers">0</p>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Pending Background Checks</h3>
+        <p class="dashboard-number" id="pendingChecks">0</p>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Approved Community Angels</h3>
+        <p class="dashboard-number" id="approvedVolunteers">0</p>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Open Service Requests</h3>
+        <p class="dashboard-number" id="openRequests">0</p>
+      </div>
+
+    </section>
+
+    <section class="admin-section">
+
+      <h2>Community Angels</h2>
+
+      <label for="volunteerSearch">
+        Search volunteers by name, skill, or service area
+      </label>
+
+      <input
+        class="admin-search"
+        type="search"
+        id="volunteerSearch"
+        placeholder="Search Community Angels..."
+      >
+
+      <div class="admin-message" id="adminMessage">
+        <p>
+          The secure volunteer list will appear here
+          after the administrator login is connected.
+        </p>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="volunteer-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Skills</th>
+              <th>Availability</th>
+              <th>Background Check</th>
+            </tr>
+          </thead>
+
+          <tbody id="volunteerTableBody">
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <section class="admin-section">
+
+      <h2>Privacy and Safety</h2>
+
+      <p>
+        Volunteer addresses, phone numbers, emergency
+        contacts, and location information must only be
+        visible to authorized administrators.
+      </p>
+
+      <p>
+        A Community Angel's location will only be used
+        when that person gives permission and chooses
+        who may see it.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Without Helping Hands.
+      All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
