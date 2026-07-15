@@ -123,6 +123,14 @@
           Sign In
         </button>
 
+        <button
+          type="button"
+          id="forgotPasswordButton"
+          class="forgot-password-button"
+        >
+          Forgot Password?
+        </button>
+
       </form>
 
       <div class="login-message" id="loginMessage"></div>
@@ -159,6 +167,39 @@
 
     const adminLoginForm =
       document.getElementById("adminLoginForm");
+
+    const forgotPasswordButton =
+      document.getElementById("forgotPasswordButton");
+
+    forgotPasswordButton.addEventListener("click", async () => {
+
+  const email =
+    document.getElementById("adminEmail").value;
+
+  if (!email) {
+    loginMessage.textContent =
+      "Please enter your email address first.";
+    return;
+  }
+
+  const { error } =
+    await adminLoginDatabase.auth.resetPasswordForEmail(
+      email,
+      {
+        redirectTo:
+          "https://hands-of-care-pzao.vercel.app/reset-password.html"
+      }
+    );
+
+  if (error) {
+    loginMessage.textContent =
+      error.message;
+  } else {
+    loginMessage.textContent =
+      "Password reset email sent. Check your inbox.";
+  }
+
+});
 
     const loginMessage =
       document.getElementById("loginMessage");
